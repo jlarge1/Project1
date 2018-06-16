@@ -1,0 +1,27 @@
+body{
+    background: url("../images/backgrd-1.jpg");
+	background-size: 100%;
+    background-repeat: no-repeat;
+    color: black;
+}
+
+footer { 
+    display: block;
+    padding-top: 10px;
+    padding-bottom: 0px;
+}
+.div{
+    display: none;
+
+}
+
+h1{
+    background-color: turquoise;
+    font: 75px;
+    text-align: center;
+}
+h2{
+    text-align: center;
+    color: aqua;
+}
+
