@@ -16,19 +16,7 @@
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js"></script>
     <link rel="stylesheet" href="assets/css/style.css">
-    <style>
-        .posBar {
-            height: 20px;
-            width: 10%;
-            float: left;
-        }
 
-        #positiveNegative {
-            margin: auto;
-            text-align: center;
-            float: none;
-        }
-    </style>
 
 </head>
 
@@ -40,7 +28,7 @@
         <div class="jumbotron jumbotron-fluid">
             <h1 class="display-3">
 
-                <strong>WHAT'S YOUR POLITICIANS TWEETING</strong>
+                <strong>Politician Tweet Analysis</strong>
             </h1>
             <div class="form-group">
                 <form id="myForm">
@@ -52,6 +40,7 @@
                 <button type="submit" class="btn btn-default" id="myButton">
                     Submit</button>
                 <hr>
+                <!-- The container shouldn't be inside the form-group div?????????  -->
                 <div class="container">
                     <div class="row">
                         <div class="col col-sm-4" id="displayTweets">
@@ -91,6 +80,7 @@
         <div class="col-sm-12">
             <!-- Line Break followed by closing -->
             <hr>
+            <!-- What's going on with the stuff below this? h6? h5? ?????-->
             <h6 class="text-center">
                 <i class="far fa-copyright"></i>
                 <small>Jon, Anthony, Steve & Johnson</small>
