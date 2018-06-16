@@ -1,7 +1,5 @@
 $("#tweetSearch").on("click", function () {
 
-
-
     var red0 = "rgba(191, 63, 63, 0.2)";
     var red1 = "rgba(191, 63, 63, 0.4)";
     var red2 = "rgba(191, 63, 63, 0.6)";
@@ -60,12 +58,6 @@ $("#tweetSearch").on("click", function () {
         return colorChoice;
     }
 
-    function postTweets() {
-        var newDiv = $("<div>").attr("class", "individualTweet").attr("id", "tweet");
-        newDiv.text(tweet);
-        $(".tweets").append(newDiv);
-    }
-
     function emotionData(result) {
         var anger = result.results.emotion.results.anger * 100;
         var joy = result.results.emotion.results.joy * 100;
@@ -74,7 +66,6 @@ $("#tweetSearch").on("click", function () {
         var surprise = result.results.emotion.results.surprise * 100;
 
         var dat = [anger, joy, sadness, fear, surprise];
-        console.log(dat);
         return dat;
     }
 
@@ -89,17 +80,25 @@ $("#tweetSearch").on("click", function () {
     }
 
     function createRadarDivs() {
-        $("#displayAnalysis").append(
+        $("#analysis").append(
             $("<canvas>").attr("id", "emotionChart")
                 .attr("class", "chart")
                 .attr("width", "300px")
                 .attr("height", "300px")
         );
-        $("#displayAnalysis").append(
+        $("#analysis").append(
+            $("<p>").attr("class", "instructions")
+                .text("The chart above is analyzing the provided tweet for the probability that each of the listed emotions are being expressed.")
+        );
+        $("#analysis").append(
             $("<canvas>").attr("id", "politicalChart")
                 .attr("class", "chart")
                 .attr("width", "300px")
                 .attr("height", "300px")
+        );
+        $("#analysis").append(
+            $("<p>").attr("class", "instructions")
+                .text("The chart above is analyzing the provided tweet for the probability that the text expressed is related to the political ideologies listed.")
         );
     }
 
@@ -158,30 +157,38 @@ $("#tweetSearch").on("click", function () {
     }
 
     function posBar() {
-        $("#displayAnalysis").append($("<div>").attr("id", "positiveNegative"));
+        $("#analysis").append($("<div>").attr("id", "positiveNegative"));
         var p = $('<p>').attr("style", "text-align:left;");
         var span = $('<span>').attr("style", "float: right;");
+        span.text("More Positive")
 
         for (i = 0; i < colors.length; i++) {
             var div = $("<div>").attr("style", "background-color: " + colors[i]).attr("class", "posBar");
             $("#positiveNegative").append(div);
         }
-        $("#positiveNegative").prepend(p.text("More Negative").append(span.text("More Positive")));
+        $("#positiveNegative").append(p.text("More Negative").append(span));
+        $("#positiveNegative").append($("<p>").text("The colors here indicate the probability of how positive or negative the tweet is."));
+        
     }
 
 
     function main(res) {
+        if( $("#analysis")){
+            $("#analysis").html(" ");
+        } else {
+            $("displayAnalysis").append($("<div>").attr("id","analysis"));
+        }
+        
+
         posBar();
         var result = JSON.parse(res);
-        console.log(result);
 
-        postTweets();
         sentimentColor(result);
         var dataEmotion = emotionData(result);
         var dataPolitical = politicalData(result);
         createRadarDivs();
 
-        console.log("org length: " + result.results.organizations.results.length);
+        
 
 
         new Chart(document.getElementById("emotionChart"), {
