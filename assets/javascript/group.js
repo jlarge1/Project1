@@ -80,6 +80,10 @@
 
 
  ];
+ var position = [
+     "POTUS", "Vice President", "Attoney General", "Administrator of EPA", "Administartor of SBA", "Director National Intelligence", "Director Central Intelligence Agency", "Director of Budget Office", "Rep United Nation", "Secretary of Agriculture", "Secretary of Commerce",
+     "Secretary of Defense", "Secretary of Education",
+ ];
 
  for (i = 0; i < cabinet.length; i++) {
      var newOption = $("<option>").addClass("options")
