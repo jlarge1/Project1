@@ -5,12 +5,17 @@
     <title>Group Project</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
         crossorigin="anonymous">
+
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
         crossorigin="anonymous">
+
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
     <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
         crossorigin="anonymous"></script>
+
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
         crossorigin="anonymous"></script>
@@ -85,6 +90,74 @@
             </div>
         </footer>
         <script type="text/javascript" src="assets/javascript/group.js"></script>
+=======
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
+        crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="assets/style.css">   
+</head>
+
+<body>
+    <div class="container">
+        <div class="jumbotron jumbotron-fluid">
+            <h1 class="display-3"></h1>
+            <p class="lead">
+                <strong>Twitter Search</strong>
+            </p>
+
+            <!-- Here we capture the End Year Parameter -->
+            <div class="form-group">
+                <label for="Search Tweets">Search Tweets:</label>
+                <input type="text" class="form-control" id="Search-Tweets" placeholder="enter the tweeter handle">
+                <div class="btn-group">
+                        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Search
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-right">
+                          <button class="dropdown-item" id="president">Donald Trump</button>
+                          <button class="dropdown-item" id="vice-president">Mike Pence</button>
+                          <button class="dropdown-item" id="attorney-general">Jeff sessions</button>
+                          <button class="dropdown-item" id="president">Donald Trump</button>
+                          <button class="dropdown-item" id="vice-president">Mike Pence</button>
+                          <button class="dropdown-item" id="attorney-general">Jeff sessions</button>
+                          <button class="dropdown-item" id="president">Donald Trump</button>
+                          <button class="dropdown-item" id="vice-president">Mike Pence</button>
+                          <button class="dropdown-item" id="attorney-general">Jeff sessions</button>
+                          <button class="dropdown-item" id="president">Donald Trump</button>
+                          <button class="dropdown-item" id="vice-president">Mike Pence</button>
+                          <button class="dropdown-item" id="attorney-general">Jeff sessions</button>
+                          <button class="dropdown-item" id="president">Donald Trump</button>
+                          <button class="dropdown-item" id="vice-president">Mike Pence</button>
+                          <button class="dropdown-item" id="attorney-general">Jeff sessions</button>
+                        </div>
+                      </div>
+            </div>
+
+            <!-- Here we have our final submit button -->
+            <button type="submit" class="btn btn-default" id="run-search">
+                <i class="fa fa-search"></i>Enter</button>
+            <hr>
+            <div class="card-header">
+                <strong>
+                    <i class="fa fa-table"></i>Top Tweets</strong>
+            </div>
+            <div class="card-body" id="tweet-section">
+            </div>
+
+        </div>
+    </div>
+    <div class="row">
+            <div class="col-sm-12">
+
+                <!-- Line Break followed by closing -->
+                <hr>
+                <h5 class="text-center">
+                        <i class="far fa-copyright"></i>
+                    <small>Jon, Anthony, Steve & Johnson</small>
+                </h5>
+
+            </div>
+        </div>
+
 </body>
 
 </html>
