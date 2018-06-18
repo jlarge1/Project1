@@ -167,19 +167,18 @@ $("#tweetSearch").on("click", function () {
             $("#positiveNegative").append(div);
         }
         $("#positiveNegative").append(p.text("More Negative").append(span));
-        $("#positiveNegative").append($("<p>").text("The colors here indicate the probability of how positive or negative the tweet is."));
+        $("#positiveNegative").append($("<p>").text("The colors here indicate the probability of how positive or negative the tweet is. The color corresponding to the tweet is used in the charts below."));
         
     }
 
 
     function main(res) {
-        if( $("#analysis")){
-            $("#analysis").html(" ");
-        } else {
-            $("displayAnalysis").append($("<div>").attr("id","analysis"));
+        if ($("#analysis")){
+           $("#analysis").empty();
         }
+        $("#displayAnalysis").append($("<div>").attr("id","analysis").text(" "));
         
-
+   
         posBar();
         var result = JSON.parse(res);
 
@@ -187,9 +186,6 @@ $("#tweetSearch").on("click", function () {
         var dataEmotion = emotionData(result);
         var dataPolitical = politicalData(result);
         createRadarDivs();
-
-        
-
 
         new Chart(document.getElementById("emotionChart"), {
             type: "radar",
