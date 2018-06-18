@@ -16,13 +16,21 @@ footer {
 }
 
 h1{
-    background-color: turquoise;
+    /* background-color: turquoise; */
     font: 75px;
     text-align: center;
 }
 h2{
     text-align: center;
-    color: aqua;
+    /* color: aqua; */
+}
+
+.form-group {
+    margin-top: 30px;
+}
+
+#displayTweets, #displayAnalysis, #displayArticles{
+    display: none;
 }
 
 /* textanalysis.js things */

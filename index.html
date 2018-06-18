@@ -30,7 +30,7 @@
 
                 <strong>Politician Tweet Analysis</strong>
             </h1>
-            <div class="form-group">
+            <div class="form-group text-center">
                 <form id="myForm">
                     <select id="mySelect" class="dropdown">
                         <option value="select" selected="select">select name from the list</option>
@@ -39,56 +39,60 @@
 
                 <button type="submit" class="btn btn-default" id="myButton">
                     Submit</button>
-                <hr>
-                <!-- The container shouldn't be inside the form-group div?????????  -->
-                <div class="container">
-                    <div class="row">
-                        <div class="col col-sm-4" id="displayTweets">
-
-
-                            <h2>Tweets</h2>
-                            <img src="http://placehold.it/350x350/CCCCCC/FFFFFF.png&text=Tweets!">
-                        </div>
-
-
-
-                        <div class="col col-sm-4" id="displayAnalysis">
-
-                            <h2>Analysis</h2>
-                            <textarea id="tweet" rows="4" cols="40">Copy/Paste a tweet to search</textarea>
-                            <button type="submit" class="btn btn-default" id="tweetSearch">
-                                Submit
-                            </button>
-
-                        </div>
-
-                        <div class="col col-sm-4" id="displayArticles">
-                            <h2>Articles</h2>
-                            <img src="http://placehold.it/350x350/CCCCCC/FFFFFF.png&text=Articles!">
-
-                        </div>
-                    </div>
-                </div>
             </div>
 
+
+            <div class="row">
+                <div class="col col-sm-4" id="displayTweets">
+
+
+                    <h2>Tweets</h2>
+
+                </div>
+
+
+
+                <div class="col col-sm-4" id="displayAnalysis">
+
+                    <h2>Analysis</h2>
+                    <textarea id="tweet" rows="4" cols="40">Copy/Paste a tweet to search</textarea>
+                    <button type="submit" class="btn btn-default" id="tweetSearch">
+                        Submit
+                    </button>
+
+                </div>
+
+                <div class="col col-sm-4" id="displayArticles">
+                    <h2>Articles</h2>
+
+
+                </div>
+            </div>
         </div>
+
+
+        <footer>
+            <div class="row">
+                <div class="col-sm-12">
+                    <!-- Line Break followed by closing -->
+                    <hr>
+                    <!-- What's going on with the stuff below this? h6? h5? ?????-->
+                    <h6 class="text-center">
+                        <i class="far fa-copyright"></i>
+                        <small>Jon, Anthony, Steve & Johnson</small>
+                        </h5>
+                </div>
+            </div>
+        </footer>
+
+
+        <script type="text/javascript" src="assets/javascript/group.js"></script>
         <script src="assets/javascript/textanalysis.js"></script>
+    </div>
+
 </body>
 
-<footer>
-    <div class="row">
-        <div class="col-sm-12">
-            <!-- Line Break followed by closing -->
-            <hr>
-            <!-- What's going on with the stuff below this? h6? h5? ?????-->
-            <h6 class="text-center">
-                <i class="far fa-copyright"></i>
-                <small>Jon, Anthony, Steve & Johnson</small>
-                </h5>
-        </div>
-    </div>
-</footer>
-<script type="text/javascript" src="assets/javascript/group.js"></script>
+
 
 
 </html>
