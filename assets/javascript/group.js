@@ -57,15 +57,14 @@ var cabinet = [
     "Van Hollen Chris", "Warner Mark", "Warren Elizabeth", "Whitehouse Sheldon", "Wicker, Roger", "Wyden Ron", "Young Todd"
 ];
 var cabinetNames = [
-    "Donald Trump", "Mike Pence", "Jeff Sessions", "Scott Pruitt", "Linda McMahon", "Dan Coats", "Gina Haspel", "Mick Mulvaney", "Nikki Haley", "Sonny Perdue", "Wilbur Ross",
-    "James Mattis", "Betsy DeVos", "Rick Perry", "Alex Azar", "Kirstjen Nielsen", "Ben Carson", "Ryan Zinke", "Alex Acosta", "Mike Pompeo", "Elaine Chao", "Steven Mnuchin", "Robert Lighthizer", "John Kelly",
-    "Lamar Alexander ", "Tammy Baldwin", "John Barrasso", "Michael Bennet", "Richard Blumenthal", "Roy Blunt", "Cory Booker", "John Boozman", "Sherrod Brown", "Richard Burr", "Maria Cantwell", "Shelley Moore Capito", "Ben Cardin", "Tom Carper",
-    "Bob Casey", "Bill Cassidy", "Susan Collins", "Chris Coons", "Bob Corker", "John Cornyn", "Catherine Cortez Masto", "Tom Cotton", "Mike Crapo", "Ted Cruz", "Steve Daines", "Joe Donnelly", "Tammy Duckworth", "Dick Durbin", "Mike Enzi",
-    "Joni Ernst", "Dianne Feinstein", "Deb Fischer", "Jeff Flake", "Cory Gardner", "Kirsten Gillibrand", "Lindsey Graham", "Chuck Grassley", "Kamala Harris", "Maggie Hassan", "Orrin Hatch", "Martin Heinrich", "Heidi Heitkamp", "Dean Heller", "Mazie Hirono",
-    "John Hoeven", "Cindy Hyde-Smith", "Jim Inhofe", "Johnny Isakson", "Ron Johnson", "Tim Kaine", "John Kennedy", "Angus King", "Doug Jones", "Amy Klobuchar", "James Lankford", "Patrick Leahy", "Mike Lee", "Joe Manchin", "Ed Markey", "John McCain",
-    "Claire McCaskill", "Mitch McConnell", "Bob Menendez", "Jeff Merkley", "Jerry Moran", "Lisa Murkowski", "Chris Murphy", "Patty Murray", "Bill Nelson", "Rand Paul", "David Perdue", "Gary Peters", "Rob Portman", "Jack Reed", "Jim Risch", "Pat Roberts",
-    "Mike Rounds", "Marco Rubio", "Bernie Sanders", "Ben Sasse", "Brian Schatz", "Chuck Schumer", "Tim Scott", "Jeanne Shaheen", "Richard Shelby", "Tina Smith", "Debbie Stabenow", "Dan Sullivan", "Jon Tester", "John Thune", "Thom Tillis", "Pat Toomey", "Tom Udall",
-    "Chris Van Hollen", "Mark Warner", "Elizabeth Warren", "Sheldon Whitehouse", "Roger Wicker", "Ron Wyden", "Todd Young"
+    "Donald Trump, POTUS", "Mike Pence, Vice President", "Jeff Sessions, Attorney General", "Scott Pruitt, Administrator of the Environmental Protection Agency", "Linda McMahon, Administrator of the Small Business Administration", "Dan Coats, Director of National Intelligence", "Gina Haspel, Director of the Central Intelligence Agency ", "Mick Mulvaney, Director of the Office of Management and Budget ", "Nikki Haley, Representative of the United States to the United Nations ", "Sonny Perdue, Secretary of Agriculture ", "Wilbur Ross, Secretary of Commerce",
+    "James Mattis, Secretary of Defense ", "Betsy DeVos, Secretary of Education ", "Rick Perry, Secretary of Energy ", "Alex Azar, Secretary of Health and Human Services", "Kirstjen Nielsen, Secretary of Homeland Security ", "Ben Carson, Secretary of Housing and Urban Development ", "Ryan Zinke, Secretary of the Interior ", "Alex Acosta, Secretary of Labor", "Mike Pompeo, Secretary of State", "Elaine Chao, Secretary of Transportation ", "Steven Mnuchin, Secretary of the Treasury", "Robert Lighthizer, U.S. Trade Representative", "John Kelly, White House Chief of Staff ",
+    "Lamar Alexander, R - TN ", "Tammy Baldwin, D - WI", "John Barrasso, R - WY ", "Michael Bennet, D - CO", "Richard Blumenthal, D - CT", "Roy Blunt, R - MO", "Cory Booker, D - NJ", "John Boozman, R - AR ", "Sherrod Brown, D - OH", "Richard Burr, R - NC", "Maria Cantwell, D - WA", "Shelley Moore Capito, R - WV", "Ben Cardin, D - MD ", "Tom Carper, D - DE",
+    "Bob Casey, D - PA ", "Bill Cassidy, R - LA", "Susan Collins, R - ME ", "Chris Coons, D - DE ", "Bob Corker, R - TN", "John Cornyn, R - TX", "Catherine Cortez Masto, D - NV", "Tom Cotton, R - AR", "Mike Crapo, R - ID", "Ted Cruz, R - TX", "Steve Daines, R - MT", "Joe Donnelly, D - IN", "Tammy Duckworth, D - IL ", "Dick Durbin, D - IL", "Mike Enzi, R - WY",
+    "Joni Ernst, R - IA", "Dianne Feinstein, D - CA", "Deb Fischer, R - NE", "Jeff Flake, R - AZ", "Cory Gardner, R - CO", "Kirsten Gillibrand, D - NY", "Lindsey Graham, R - SC ", "Chuck Grassley, R - IA", "Kamala Harris, D - CA", "Maggie Hassan, D - NH", "Orrin Hatch, R - UT", "Martin Heinrich, D - NM", "Heidi Heitkamp, D - ND", "Dean Heller, R - NV", "Mazie Hirono, D - HI",
+    "John Hoeven, R - ND", "Cindy Hyde-Smith, R - MS", "Jim Inhofe, R - OK", "Johnny Isakson, R - GA", "Ron Johnson, R - WI", "Tim Kaine, D - VA", "John Kennedy, R - LA ", "Angus King, I - ME", "Doug Jones, D - AL", "Amy Klobuchar, D - MN", "James Lankford, R - OK", "Patrick Leahy, D - VT ", "Mike Lee, R - UT", "Joe Manchin, D - WV", "Ed Markey, D - MA", "John McCain, R - AZ",
+    "Claire McCaskill, D - MO", "Mitch McConnell, R - KY", "Bob Menendez, D - NJ", "Jeff Merkley, D - OR", "Jerry Moran, R - KS", "Lisa Murkowski, R - AK", "Chris Murphy, D - CT", "Patty Murray, D - WA", "Bill Nelson, D - FL", "Rand Paul, R - KY", "David Perdue, R - GA", "Gary Peters, D - MI", "Rob Portman, R - OH", "Jack Reed, D - RI", "Jim Risch, R - ID", "Pat Roberts,R - KS",
+    "Mike Rounds, R - SD ", "Marco Rubio, R - FL", "Bernie Sanders, I - VT", "Ben Sasse, R - NE", "Brian Schatz, D - HI", "Chuck Schumer, D - NY", "Tim Scott, R - SC", "Jeanne Shaheen, D - NH", "Richard Shelby, R - AL", "Tina Smith, D - MN", "Debbie Stabenow, D - MI", "Dan Sullivan, R - AK", "Jon Tester, D - MT", "John Thune, R - SD", "Thom Tillis, R - NC", "Pat Toomey,R - PA ", "Tom Udall, D - NM"
 ];
 var twit = [
     "@realDonaldTrump", "@VP", "@jeffsessions", "@EPAScottPuritt", "@SBALinda", "@dcoatsxvi", "@GinaHospel", "@MickMulvaneyOMB", "@nikkihaley", "@SecretarySonny", "@SecretaryRoss",
@@ -77,19 +76,22 @@ var twit = [
     "@McCaskillOffice", "@SenateMajLdr", "@SenatorMenendez", "@SenJeffMerkley", "@JerryMoran", "@lisamurkowski", "@ChrisMurphyCT", "@PattyMurray", "@SenBillNelson", "@DrRandPaul", "@sendavidperdue", "@SenGaryPeters", "@senrobportman", "@SenJackReed", "@SenatorRisch", "@PatRoberts",
     "@SenatorRounds", "@marcorubio", "@SenSanders", "@SenSasse", "@SenBrianSchatz", "@SenSchumer‏", "@SenatorTimScott", "@SenatorShaheen", "@SenShelby", "@TinaSmithMN", "@SenStabenow", "@SenDanSullivan", "@SenatorTester", "@SenJohnThune", "@SenThomTillis", "@SenToomey", "@SenatorTomUdall",
     "@ChrisVanHollen", "@MarkWarner", "@SenWarren‏", "@SenWhitehouse‏", "@SenatorWicker", "@RonWyden", "@SenToddYoung"
-
-
 ];
 
 for (i = 0; i < cabinet.length; i++) {
     var newOption = $("<option>").addClass("options")
-    newOption.append(cabinet[i]);
+    newOption.append(cabinetNames[i]);
     newOption.attr("data-name", cabinetNames[i]);
     newOption.attr("data-twitter", twit[i]);
     $("#mySelect").append(newOption);
 }
 $("#myButton").on("click", function () {
-    //Removes previous information from both columns
+    //show hidden divs
+    $("#displayTweets").attr("style","display: inline;");
+    $("#displayAnalysis").attr("style","display: inline;");
+    $("#displayArticles").attr("style","display: inline;");
+
+    //Removes previous information from both 
     $("#displayTweets").empty();
     $("#displayArticles").empty();
     //Takes the text from the text box and applies it to search
