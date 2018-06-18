@@ -2,6 +2,7 @@ body{
     background: url("../images/backgrd-1.jpg");
 	background-size: 100%;
     background-repeat: no-repeat;
+    background-attachment: fixed;
     color: black;
 }
 
@@ -38,6 +39,10 @@ h2{
     height: 20px;
     width: 10%;
     float: left;
+}
+
+.container {
+    background:	rgba(238, 238, 238, 0.8);
 }
 
 #positiveNegative {
