@@ -22,14 +22,18 @@ footer {
 }
 
 h1{
-    /* background-color: turquoise; */
     font: 75px;
     text-align: center;
 }
 h2{
     text-align: center;
-    /* color: aqua; */
-    margin-bottom: 20px;
+
+    margin-bottom: 30px;
+}
+
+h3 {
+    margin-bottom: 30px;
+
 }
 
 .form-group {
@@ -38,7 +42,7 @@ h2{
 
 #displayTweets, #displayAnalysis, #displayArticles{
     display: none;
-    
+
     
 }
 
