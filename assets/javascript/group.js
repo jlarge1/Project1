@@ -21,8 +21,8 @@ function headlines() {
             var source = "<h5> From the Guardian: </h5>";
             var headline = article.webTitle;
             var $articleListItem = $("<li class='list-group-item articleHeadline'>");
-            $articleListItem.append("<a href='" + article.webUrl + "'>" + article.webUrl + "</a>");
-            $articleList.append(source, "<strong> " + headline + "</strong>", $articleListItem);
+            $articleListItem.append("<a href='" + article.webUrl + "'>" + "<strong> " + headline + "</strong>" + "</a>");
+            $articleList.append(source, $articleListItem);
         }
     })
     var queryNYTURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=2ad99af66aeb468e98d92f03183511e6&q=" + politician;
@@ -39,8 +39,8 @@ function headlines() {
             var NYTsource = "<h5> From the New York Times: </h5>";
             var NYTheadline = Timesarticle.headline.main;
             var $articleListItem = $("<li class='list-group-item articleHeadline'>");
-            $articleListItem.append("<a href='" + Timesarticle.web_url + "'>" + Timesarticle.web_url + "</a>");
-            $articleList.append(NYTsource, "<strong> " + NYTheadline + "</strong>", $articleListItem);
+            $articleListItem.append("<a href='" + Timesarticle.web_url + "'>" + "<strong> " + NYTheadline + "</strong>" + "</a>");
+            $articleList.append(NYTsource, $articleListItem);
         }
     });
 }
@@ -87,9 +87,9 @@ for (i = 0; i < cabinet.length; i++) {
 }
 $("#myButton").on("click", function () {
     //show hidden divs
-    $("#displayTweets").attr("style","display: inline;");
-    $("#displayAnalysis").attr("style","display: inline;");
-    $("#displayArticles").attr("style","display: inline;");
+    $("#displayTweets").attr("style", "display: inline;");
+    $("#displayAnalysis").attr("style", "display: inline;");
+    $("#displayArticles").attr("style", "display: inline;");
 
     //Removes previous information from both 
     $("#displayTweets").empty();
