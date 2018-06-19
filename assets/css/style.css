@@ -1,5 +1,5 @@
 body{
-    background: url("../images/backgrd-1.jpg");
+    background: url("../images/flag6.png");
 	background-size: 100%;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -13,6 +13,11 @@ footer {
 }
 .div{
     display: none;
+    /* word-break: break-all; */
+   
+    width: 150px;
+    
+    word-wrap: break-word;
 
 }
 
@@ -24,6 +29,7 @@ h1{
 h2{
     text-align: center;
     /* color: aqua; */
+    margin-bottom: 20px;
 }
 
 .form-group {
@@ -32,6 +38,8 @@ h2{
 
 #displayTweets, #displayAnalysis, #displayArticles{
     display: none;
+    border: 1px solid #000000;
+    
 }
 
 /* textanalysis.js things */
@@ -54,4 +62,5 @@ h2{
 #analysis {
     margin-top: 20px;
 }
+
 
