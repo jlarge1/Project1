@@ -1,17 +1,19 @@
 //Create empty variable for user to be filled in after text is entered 
 var userName = "";
-var politician = "";
+var politicianName = "";
+var politicanTitle = "";
 var searchterm = "";
 //function that accesses the NYT and Guardian API's and adds 5 headlines/URLs to screen
 function headlines() {
-    $("#displayArticles").html("<h3>" + politician + " in the news" + "</h3>" + "<br>");
-    var queryGuardianURL = "https://content.guardianapis.com/search?page-size=5&order-by=newest&q=%22" + politician + "%22&api-key=152a7745-630a-46f3-8a3e-b776a965e1e8";
+    $("#displayArticles").html("<h3>" + politicianTitle + " in the news" + "</h3>" + "<br>");
+    var queryGuardianURL = "https://content.guardianapis.com/search?page-size=5&order-by=newest&q=%22" + politicianName + "%22&api-key=152a7745-630a-46f3-8a3e-b776a965e1e8";
     $.ajax({
         url: queryGuardianURL,
         method: "GET"
     }).then(function (data) {
         //Array that returns the first 5 results
         var GuardianArticles = [data.response.results[0], data.response.results[1], data.response.results[2], data.response.results[3], data.response.results[4],]
+        console.log(GuardianArticles);
         //For loop that adds each result to the page dynamically
         for (var i = 0; i < GuardianArticles.length; i++) {
             var article = data.response.results[i];
@@ -25,7 +27,7 @@ function headlines() {
             $articleList.append(source, $articleListItem);
         }
     })
-    var queryNYTURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=2ad99af66aeb468e98d92f03183511e6&q=" + politician;
+    var queryNYTURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=2ad99af66aeb468e98d92f03183511e6&q=" + politicianName;
     $.ajax({
         url: queryNYTURL,
         method: "GET"
@@ -66,6 +68,17 @@ var cabinetNames = [
     "Claire McCaskill, D - MO", "Mitch McConnell, R - KY", "Bob Menendez, D - NJ", "Jeff Merkley, D - OR", "Jerry Moran, R - KS", "Lisa Murkowski, R - AK", "Chris Murphy, D - CT", "Patty Murray, D - WA", "Bill Nelson, D - FL", "Rand Paul, R - KY", "David Perdue, R - GA", "Gary Peters, D - MI", "Rob Portman, R - OH", "Jack Reed, D - RI", "Jim Risch, R - ID", "Pat Roberts,R - KS",
     "Mike Rounds, R - SD ", "Marco Rubio, R - FL", "Bernie Sanders, I - VT", "Ben Sasse, R - NE", "Brian Schatz, D - HI", "Chuck Schumer, D - NY", "Tim Scott, R - SC", "Jeanne Shaheen, D - NH", "Richard Shelby, R - AL", "Tina Smith, D - MN", "Debbie Stabenow, D - MI", "Dan Sullivan, R - AK", "Jon Tester, D - MT", "John Thune, R - SD", "Thom Tillis, R - NC", "Pat Toomey,R - PA ", "Tom Udall, D - NM"
 ];
+
+var commonNames = [
+    "Donald Trump", "Mike Pence", "Jeff Sessions", "Scott Pruitt", "Linda McMahon", "Dan Coats", "Gina Haspel", "Mick Mulvaney", "Nikki Haley", "Sonny Perdue", "Wilbur Ross",
+    "James Mattis", "Betsy DeVos", "Rick Perry", "Alex Azar", "Kirstjen Nielsen", "Ben Carson", "Ryan Zinke", "Alex Acosta", "Mike Pompeo", "Elaine Chao", "Steven Mnuchin", "Robert Lighthizer", "John Kelly",
+    "Lamar Alexander", "Tammy Baldwin", "John Barrasso", "Michael Bennet", "Richard Blumenthal", "Roy Blunt", "Cory Booker", "John Boozman", "Sherrod Brown", "Richard Burr", "Maria Cantwell", "Shelley Moore Capito", "Ben Cardin", "Tom Carper",
+    "Bob Casey", "Bill Cassidy", "Susan Collins", "Chris Coons", "Bob Corker", "John Cornyn", "Catherine Cortez Masto", "Tom Cotton", "Mike Crapo", "Ted Cruz", "Steve Daines", "Joe Donnelly", "Tammy Duckworth", "Dick Durbin", "Mike Enzi",
+    "Joni Ernst", "Dianne Feinstein", "Deb Fischer", "Jeff Flake", "Cory Gardner", "Kirsten Gillibrand", "Lindsey Graham", "Chuck Grassley", "Kamala Harris", "Maggie Hassan", "Orrin Hatch", "Martin Heinrich", "Heidi Heitkamp", "Dean Heller", "Mazie Hirono",
+    "John Hoeven", "Cindy Hyde-Smith", "Jim Inhofe", "Johnny Isakson", "Ron Johnson", "Tim Kaine", "John Kennedy", "Angus King", "Doug Jones", "Amy Klobuchar", "James Lankford", "Patrick Leahy", "Mike Lee", "Joe Manchin", "Ed Markey", "John McCain",
+    "Claire McCaskill", "Mitch McConnell", "Bob Menendez", "Jeff Merkley", "Jerry Moran", "Lisa Murkowski", "Chris Murphy", "Patty Murray", "Bill Nelson", "Rand Paul", "David Perdue", "Gary Peters", "Rob Portman", "Jack Reed", "Jim Risch", "Pat Roberts",
+    "Mike Rounds", "Marco Rubio", "Bernie Sanders", "Ben Sasse", "Brian Schatz", "Chuck Schumer", "Tim Scott", "Jeanne Shaheen", "Richard Shelby", "Tina Smith", "Debbie Stabenow", "Dan Sullivan", "Jon Tester", "John Thune", "Thom Tillis", "Pat Toomey", "Tom Udall"
+]
 var twit = [
     "@realDonaldTrump", "@VP", "@jeffsessions", "@EPAScottPuritt", "@SBALinda", "@dcoatsxvi", "@GinaHospel", "@MickMulvaneyOMB", "@nikkihaley", "@SecretarySonny", "@SecretaryRoss",
     "@jamesnormanmattis", "@BetsyDeVosED", "@SecretaryPerry", "@SecAzar‏", "@SecNielsen", "@SecretaryCarson‏", "@SecretaryZinke", "@SecretaryAcosta", "@SecPompeo‏", "@SecElaineChao", "@stevenmnuchin1", "@RobertLighthiz1", "@WhiteHouse",
@@ -81,7 +94,8 @@ var twit = [
 for (i = 0; i < cabinet.length; i++) {
     var newOption = $("<option>").addClass("options")
     newOption.append(cabinetNames[i]);
-    newOption.attr("data-name", cabinetNames[i]);
+    newOption.attr("data-name", commonNames[i]);
+    newOption.attr("data-title", cabinetNames[i]);
     newOption.attr("data-twitter", twit[i]);
     $("#mySelect").append(newOption);
 }
@@ -96,10 +110,11 @@ $("#myButton").on("click", function () {
     $("#displayArticles").empty();
     //Takes the text from the text box and applies it to search
     userName = $(".options:selected").attr("data-twitter");
-    politician = $(".options:selected").attr("data-name");
+    politicianName = $(".options:selected").attr("data-name");
+    politicianTitle = $(".options:selected").attr("data-title");
     var newTweets = $("<a>").addClass("twitter-timeline").attr({ "href": "https://twitter.com/" + userName + "?ref_src=twsrc%5Etfw", "data-tweet-limit": 5, "height": 200, "width": 400 });
     var newScript = $("<script async src=" + "https://platform.twitter.com/widgets.js" + "?charset=utf-8>" + "/script>")
-    var tweetAuthor = $("<h3> Tweets by " + politician + "</h3>");
+    var tweetAuthor = $("<h3> Tweets by " + politicianTitle + "</h3>");
     $("#displayTweets").append(newTweets).append(newScript).prepend(tweetAuthor);
     headlines();
     $("#handle").append(userName[i]);
