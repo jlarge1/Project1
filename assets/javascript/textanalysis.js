@@ -175,7 +175,9 @@ $("#tweetSearch").on("click", function () {
     function main(res) {
         if ($("#analysis")){
            $("#analysis").empty();
+           
         }
+        $("#buttonDiv").html(" ");
         $("#displayAnalysis").append($("<div>").attr("id","analysis").text(" "));
         
    
