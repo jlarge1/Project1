@@ -27,16 +27,13 @@ h1{
 }
 h2{
     text-align: center;
-<<<<<<< HEAD
-    /* color: aqua; */
-    margin-bottom: 20px;
-=======
+
     margin-bottom: 30px;
 }
 
 h3 {
     margin-bottom: 30px;
->>>>>>> update
+
 }
 
 .form-group {
@@ -45,7 +42,7 @@ h3 {
 
 #displayTweets, #displayAnalysis, #displayArticles{
     display: none;
-    border: 1px solid #000000;
+
     
 }
 
